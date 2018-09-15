@@ -14,7 +14,7 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
 //routes
-app.use("/routes/api/items", items);
-const port = 3000 || process.env.PORT;
+app.use("/api/items", items);
+const port = process.env.PORT || 3000;
 
-app.listen(() => console.log(`Your server is running on port: ${port}`));
+app.listen(port, () => console.log(`Your server is running on port: ${port}`));
